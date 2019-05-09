@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createStore } from 'react-redux'
+import { rootReducers } from "./reducer";
+
+// store 
+const store = createStore(rootReducers);
+window.store = store;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
